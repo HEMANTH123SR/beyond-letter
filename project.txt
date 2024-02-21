@@ -1,0 +1,57 @@
+Beyond Letter App Summary:
+
+Beyond Letter is a unique application designed to allow users to write letters or create videos for their future selves. The app provides a platform for users to compose personal messages, sharing thoughts, goals, and reflections. Users can schedule the delivery of these letters and videos to be sent to their email after a specified duration, such as six months.
+
+Key Features:
+
+1. 
+ User-Friendly Interface:
+   - Intuitive design for easy letter and video composition.
+
+2.
+ Authentication and User Accounts:
+   - Secure user accounts with login functionality.
+
+3.
+ Letter/Video Composition:
+   - Writing letters or recording videos with options for formatting and attachments.
+
+4.
+ Scheduling:
+   - Customizable scheduling for letter and video delivery, allowing users to set the timeframe.
+
+5.
+ Storage and Retrieval:
+   - Secure storage of letters and videos, with reliable retrieval for scheduled deliveries.
+
+6.
+ Email Integration:
+   - Utilizes Amazon SES for automatic email notifications with links to letters and videos.
+
+7.
+ Reminder System:
+   - Notifications to remind users before the scheduled delivery date, offering an opportunity to review or edit content.
+
+8.
+ Data Storage:
+   - MongoDB chosen as the database for flexible schema design.
+
+9.
+ Backend:
+   - Next.js API for backend logic, providing seamless integration with the frontend.
+
+10.
+ Infrastructure:
+    - MongoDB can be managed, either through self-hosting or using MongoDB Atlas.
+    - Next.js API offers simplicity and integration with the Next.js frontend.
+
+Technology Stack:
+
+- Frontend: Next.js
+- Backend: Next.js API
+- Database: MongoDB
+- Video Storage: Amazon S3
+- Email Service: Amazon SES
+- Auth: Clerk
+
+Beyond Letter aims to provide users with a personal and reflective experience, allowing them to connect with their past selves through the thoughtful composition of letters and videos scheduled for future delivery.
