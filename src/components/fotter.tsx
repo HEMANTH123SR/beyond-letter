@@ -20,7 +20,7 @@ export const Fotter = () => {
 
                 </div>
                 <div className='flex justify-center md:justify-end px-6 h-full w-full'>
-                    <p className="text-black text-xs">© 2023 BeyondLetters</p>
+                    <p className="text-white text-xs">© 2023 BeyondLetter</p>
                 </div>
             </div>
         </footer>
