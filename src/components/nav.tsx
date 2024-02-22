@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
+import { MdSpaceDashboard } from "react-icons/md";
 import { UserButton, useUser } from "@clerk/nextjs";
+import { Skeleton } from "@/components/ui/skeleton";
 export const Nav = () => {
     const { user, isLoaded } = useUser();
     return (
@@ -17,12 +19,14 @@ export const Nav = () => {
                     Beyond<span>Letter</span>
                 </h1>
             </div>
-            {/* <div>
-                <img src={NejireHado.src} className="h-9 w-9 rounded-full" />
-            </div> */}
-            {isLoaded && user && (
-                <UserButton afterMultiSessionSingleSignOutUrl="/" />
-            )}
+            <div className="flex justify-center items-center space-x-3">
+                <MdSpaceDashboard className="h-8 w-7 cursor-pointer text-blue-400" />
+                {isLoaded && user ? (
+                    <UserButton afterMultiSessionSingleSignOutUrl="/" />
+                ) : (
+                    <Skeleton className="h-9 w-9 rounded-full" />
+                )}
+            </div>
         </nav>
     );
 };
