@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
-import NejireHado from "../../public/blue-cat.jpg"
+import { UserButton, useUser } from "@clerk/nextjs";
 export const Nav = () => {
+    const { user, isLoaded } = useUser();
     return (
         <nav
             className="flex justify-between px-3 md:px-6 py-2"
@@ -15,9 +17,12 @@ export const Nav = () => {
                     Beyond<span>Letter</span>
                 </h1>
             </div>
-            <div>
+            {/* <div>
                 <img src={NejireHado.src} className="h-9 w-9 rounded-full" />
-            </div>
+            </div> */}
+            {isLoaded && user && (
+                <UserButton afterMultiSessionSingleSignOutUrl="/" />
+            )}
         </nav>
     );
 };
