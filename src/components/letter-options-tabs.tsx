@@ -34,27 +34,7 @@ export function LetterOptionsTabs() {
                     <DummyContent />
                 </div>
             ),
-        },
-        {
-            title: "Content",
-            value: "content",
-            content: (
-                <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-blue-600 bg-white">
-                    <p>Content tab</p>
-                    <DummyContent />
-                </div>
-            ),
-        },
-        {
-            title: "Random",
-            value: "random",
-            content: (
-                <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-blue-600 bg-white">
-                    <p>Random tab</p>
-                    <DummyContent />
-                </div>
-            ),
-        },
+        }
     ];
 
     return (
