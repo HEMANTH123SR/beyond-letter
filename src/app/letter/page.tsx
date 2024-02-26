@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useUser } from "@clerk/nextjs"
 import { getDate } from "@/lib/getDate";
 import { Calendar } from "@/components/ui/calendar";
 import { Input } from "@/components/ui/input";
@@ -8,6 +9,42 @@ import { Button } from "@/components/ui/button";
 const Page = () => {
     const [text, setText] = useState<string>("");
     const [date, setDate] = useState<Date | undefined>(new Date());
+    const [email, setEmail] = useState<string>("");
+    const [userId, setUserId] = useState<string | undefined>();
+    const [userImage, setUserImage] = useState<string | undefined>()
+    const [userName, setUserName] = useState<string | undefined>()
+    const { user } = useUser();
+    useEffect(() => {
+        if (user) {
+            setEmail(user.emailAddresses[0].emailAddress);
+            setUserId(user.id);
+            setUserImage(user.imageUrl);
+            setUserName(user.fullName as string);
+        }
+        console.log(user);
+    }, [user]);
+
+    const handleCreateLetter = async () => {
+        try {
+            const res = await fetch("/api/create/letter", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    userId,
+                    userName,
+                    userImage,
+                    typeOfLetter: "text",
+                    letterText: text,
+                    dateOfEmailSubmit: date,
+                    emails: [email]
+                })
+            })
+        } catch (err) {
+            console.log("error of put reuest /api/create/letter ", err);
+        }
+    }
 
     return (
         <div className="min-h-screen my-6  ">
@@ -43,7 +80,9 @@ const Page = () => {
                             <Input
                                 type="email"
                                 placeholder="Email"
-                                className="bg-white text-black"
+                                className="bg-white text-blue-600"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value as string)}
                             />
                         </div>
                         <div className="flex w-full space-x-4">
@@ -61,7 +100,9 @@ const Page = () => {
                                     Terms of Use.
                                 </span>
                             </p>
-                            <button className="w-full sm:w-full text-center p-2.5 bg-gradient-to-r from-sky-500 to-indigo-500 text-white rounded-md text-lg font-semibold font-sans">
+                            <button className="w-full sm:w-full text-center p-2.5 bg-gradient-to-r from-sky-500 to-indigo-500 text-white rounded-md text-lg font-semibold font-sans"
+                                onClick={() => handleCreateLetter()}
+                            >
                                 Send to the Future
                             </button>
                         </div>
