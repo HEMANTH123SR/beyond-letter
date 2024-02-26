@@ -1,6 +1,6 @@
 import { MacbookScroll } from "@/components/macbook-scroll";
 import WebsiteScreenShot from "../../public/website-screen-shot.png";
-import { TypewriterEffect } from "@/components/typewriter-effect";
+import { UserNameTypewriterEffect } from "@/components/username-typewriter-effect";
 import Link from "next/link";
 
 export default function Home() {
@@ -14,29 +14,18 @@ export default function Home() {
         </h2>
         <h4 className="md:hidden  text-blue-400 font-sans font-bold pr-6">
           Your letter and videos are safe with use we have sent our 😄
-          <span className="text-slate-200">100</span> letters & videos in
-          <span className="text-slate-200"> 1week</span>
+          <span className="text-blue-300">100</span> letters & videos in
+          <span className="text-blue-300"> 1week</span>
         </h4>
         <h4 className="hidden md:block text-2xl text-blue-400 font-sans font-bold">
           Your letter and videos are safe with use we have sent our 😄
-          <br /> <span className="text-slate-200"> 100</span> letters & videos
-          in <span className="text-slate-200 ">1week</span>
+          <br /> <span className="text-blue-300"> 100</span> letters & videos
+          in <span className="text-blue-300 ">1week</span>
         </h4>
       </div>
-      <TypewriterEffect
-        words={[
-          {
-            text: "Beyond",
-            className:
-              " text-[#60A5FA] text-3xl font-extrabold tracking-tight md:text-6xl md:leading-[3.5rem] ",
-          },
-          {
-            text: "Letter",
-            className:
-              "text-white text-3xl font-extrabold tracking-tight md:text-6xl md:leading-[3.5rem] ",
-          },
-        ]}
-      />
+      <div className="my-10">
+        <UserNameTypewriterEffect />
+      </div>
       <MacbookScroll
         title=""
         src={WebsiteScreenShot.src}
