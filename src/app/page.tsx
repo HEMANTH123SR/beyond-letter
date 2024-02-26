@@ -1,7 +1,8 @@
-import { MacbookScroll } from "@/components/ui/macbook-scroll";
-import WebsiteScreenShot from "../../public/website-screen-shot.png";
-import { UserNameTypewriterEffect } from "@/components/username-typewriter-effect";
 import Link from "next/link";
+import { MacbookScroll } from "@/components/ui/macbook-scroll";
+import { UserNameTypewriterEffect } from "@/components/username-typewriter-effect";
+import { LetterOptionsTabs } from "@/components/letter-options-tabs";
+import WebsiteScreenShot from "../../public/website-screen-shot.png";
 
 export default function Home() {
   return (
@@ -19,8 +20,8 @@ export default function Home() {
         </h4>
         <h4 className="hidden md:block text-2xl text-blue-400 font-sans font-bold">
           Your letter and videos are safe with use we have sent our 😄
-          <br /> <span className="text-blue-300"> 100</span> letters & videos
-          in <span className="text-blue-300 ">1week</span>
+          <br /> <span className="text-blue-300"> 100</span> letters & videos in{" "}
+          <span className="text-blue-300 ">1week</span>
         </h4>
       </div>
       <div className="my-8">
@@ -36,8 +37,14 @@ export default function Home() {
         }
         showGradient={false}
       />
-      <h1 className="text-3xl font-extrabold tracking-tight md:text-6xl md:leading-[3.5rem] text-center">BeyondLetter</h1>
-      <p className="text-base font-sans text-center text-blue-200 font-semibold">Write a letter to future</p>
+      <h1 className="text-3xl font-extrabold tracking-tight md:text-6xl md:leading-[3.5rem] text-center">
+        BeyondLetter
+      </h1>
+      <p className="text-base font-sans text-center text-blue-200 font-semibold">
+        Write a letter to future
+      </p>
+      <div className="my-5"></div>
+      <LetterOptionsTabs />
     </main>
   );
 }
