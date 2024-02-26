@@ -23,7 +23,7 @@ export default function Home() {
           in <span className="text-blue-300 ">1week</span>
         </h4>
       </div>
-      <div className="my-10">
+      <div className="my-8">
         <UserNameTypewriterEffect />
       </div>
       <MacbookScroll
