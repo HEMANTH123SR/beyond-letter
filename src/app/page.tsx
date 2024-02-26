@@ -6,7 +6,7 @@ import WebsiteScreenShot from "../../public/website-screen-shot.png";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-[250vh] xl:min-h-[400vh] ">
+    <main className="flex flex-col  min-h-[600vh]">
       <div className="w-full pl-3 pr-4 md:pl-6 md:pr-20  mt-4 md:mb-6 md:mt-10">
         <h2 className="text-3xl font-extrabold tracking-tight md:text-6xl md:leading-[3.5rem]">
           Write a letter or{" "}
@@ -29,7 +29,7 @@ export default function Home() {
       </div>
       <MacbookScroll
         title=""
-        src={WebsiteScreenShot.src}
+        src="/linear.webp"
         badge={
           <Link href="https://peerlist.io/manuarora">
             <Badge className="h-10 w-10 transform -rotate-12" />
@@ -37,13 +37,13 @@ export default function Home() {
         }
         showGradient={false}
       />
-      <h1 className="text-3xl font-extrabold tracking-tight md:text-6xl md:leading-[3.5rem] text-center">
+      <div className="min-h-[120vh]"></div>
+      <h1 className="text-3xl mt-2 font-extrabold tracking-tight md:text-6xl md:leading-[3.5rem] text-center">
         BeyondLetter
       </h1>
       <p className="text-base font-sans text-center text-blue-200 font-semibold">
-        Write a letter to future
+        Write a letter to future , Capture Your Today for a Message to Tomorrow
       </p>
-      <div className="my-5"></div>
       <LetterOptionsTabs />
     </main>
   );
