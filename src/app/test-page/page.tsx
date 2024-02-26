@@ -1,5 +1,5 @@
-import { TypewriterEffect } from "@/components/typewriter-effect"
-import { WavyBackground } from "@/components/wavy-background"
+import { TypewriterEffect } from "@/components/ui/typewriter-effect"
+import { WavyBackground } from "@/components/ui/wavy-background"
 const Page = () => {
     return (
         <div >

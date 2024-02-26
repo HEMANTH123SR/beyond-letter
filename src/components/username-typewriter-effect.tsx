@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useUser } from "@clerk/nextjs";
-import { TypewriterEffect } from "@/components/typewriter-effect";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 export const UserNameTypewriterEffect = () => {
     const { user, isLoaded } = useUser();
     return (

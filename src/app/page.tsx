@@ -1,4 +1,4 @@
-import { MacbookScroll } from "@/components/macbook-scroll";
+import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import WebsiteScreenShot from "../../public/website-screen-shot.png";
 import { UserNameTypewriterEffect } from "@/components/username-typewriter-effect";
 import Link from "next/link";
@@ -36,6 +36,8 @@ export default function Home() {
         }
         showGradient={false}
       />
+      <h1 className="text-3xl font-extrabold tracking-tight md:text-6xl md:leading-[3.5rem] text-center">BeyondLetter</h1>
+      <p className="text-base font-sans text-center text-blue-200 font-semibold">Write a letter to future</p>
     </main>
   );
 }
