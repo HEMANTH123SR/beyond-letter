@@ -1,8 +1,6 @@
 import { MacbookScroll } from "@/components/macbook-scroll";
-import TimeIllustartion from "../../public/3d-plastilina-three-quarter-view-of-a-blue-clock.png";
 import WebsiteScreenShot from "../../public/website-screen-shot.png";
-import { GiNotebook, GiAudioCassette } from "react-icons/gi";
-import { BiSolidVideoRecording } from "react-icons/bi";
+import { TypewriterEffect } from "@/components/typewriter-effect";
 import Link from "next/link";
 
 export default function Home() {
@@ -25,7 +23,20 @@ export default function Home() {
           in <span className="text-slate-200 ">1week</span>
         </h4>
       </div>
-
+      <TypewriterEffect
+        words={[
+          {
+            text: "Beyond",
+            className:
+              " text-[#60A5FA] text-3xl font-extrabold tracking-tight md:text-6xl md:leading-[3.5rem] ",
+          },
+          {
+            text: "Letter",
+            className:
+              "text-white text-3xl font-extrabold tracking-tight md:text-6xl md:leading-[3.5rem] ",
+          },
+        ]}
+      />
       <MacbookScroll
         title=""
         src={WebsiteScreenShot.src}
@@ -83,6 +94,9 @@ const Badge = ({ className }: { className?: string }) => {
 };
 
 {
+  //   import { GiNotebook, GiAudioCassette } from "react-icons/gi";
+  // import TimeIllustartion from "../../public/3d-plastilina-three-quarter-view-of-a-blue-clock.png";
+  // import { BiSolidVideoRecording } from "react-icons/bi";
   /* <div className="flex px-12 pb-8">
         <div className="w-2/4 flex flex-col space-y-8 mt-12">
           <Link href={"/letter"}>
