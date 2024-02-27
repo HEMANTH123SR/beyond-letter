@@ -2,7 +2,7 @@ import Link from "next/link";
 import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import { UserNameTypewriterEffect } from "@/components/username-typewriter-effect";
 import { LetterOptionsTabs } from "@/components/letter-options-tabs";
-import WebsiteScreenShot from "../../public/website-screen-shot.png";
+import { InfiniteMovingCardsDemo } from "@/components/repeating-moving-review"
 
 export default function Home() {
   return (
@@ -37,7 +37,7 @@ export default function Home() {
         }
         showGradient={false}
       />
-      <div className="md:min-h-[40vh] lg:min-h-[45vh] xl:min-h-[120vh]"></div>
+      <div className="min-h-[30vh] md:min-h-[40vh] lg:min-h-[45vh] xl:min-h-[120vh]"></div>
       <h1 className="text-3xl mt-2 font-extrabold tracking-tight md:text-6xl md:leading-[3.5rem] text-center">
         BeyondLetter
       </h1>
@@ -45,6 +45,8 @@ export default function Home() {
         Write a letter to future , Capture Your Today for a Message to Tomorrow
       </p>
       <LetterOptionsTabs />
+      <div className="my-4"></div>
+      <InfiniteMovingCardsDemo />
     </main>
   );
 }
@@ -91,62 +93,3 @@ const Badge = ({ className }: { className?: string }) => {
   );
 };
 
-{
-  //   import { GiNotebook, GiAudioCassette } from "react-icons/gi";
-  // import TimeIllustartion from "../../public/3d-plastilina-three-quarter-view-of-a-blue-clock.png";
-  // import { BiSolidVideoRecording } from "react-icons/bi";
-  /* <div className="flex px-12 pb-8">
-        <div className="w-2/4 flex flex-col space-y-8 mt-12">
-          <Link href={"/letter"}>
-            <div className="flex justify-start items-center">
-              <div className=" rounded-lg px-12 py-3 flex flex-col justify-center items-center min-w-80 cursor-pointer hover:bg-blue-600 space-x-3">
-                <div className="flex space-x-3 justify-center items-center">
-                  <GiNotebook className="rounded-full  text-white text-5xl" />
-                  <h3 className="text-3xl font-bold">Letter</h3>
-                </div>
-                <div className=" justify-center items-center flex ">
-                  <p className="text-xs font-semibold font-sans px-1">
-                    Write a letter for your future self
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Link>
-
-          <Link href={"/video"}>
-            <div className="flex justify-start items-center">
-              <div className=" rounded-lg px-12 py-3 flex flex-col justify-center items-center min-w-80 cursor-pointer hover:bg-blue-600 space-x-3">
-                <div className="flex space-x-3 justify-center items-center">
-                  <BiSolidVideoRecording className="rounded-full  text-white text-5xl" />
-                  <h3 className="text-3xl font-bold">Video</h3>
-                </div>
-                <div className=" justify-center items-center flex ">
-                  <p className="text-xs font-semibold font-sans">
-                    Record a Video for your future self
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Link>
-
-          <Link href={"/record"}>
-            <div className="flex justify-start items-center">
-              <div className="rounded-lg px-12 py-3 flex flex-col justify-center items-center min-w-80 cursor-pointer hover:bg-blue-600 space-x-3">
-                <div className="flex space-x-3 justify-center items-center">
-                  <GiAudioCassette className="rounded-full  text-white text-5xl" />
-                  <h3 className="text-3xl font-bold">Audio</h3>
-                </div>
-                <div className=" justify-center items-center flex ">
-                  <p className="text-xs font-semibold font-sans">
-                    Record a Audio for your future self
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Link>
-        </div>
-        <div className="w-2/4 flex justify-center items-center">
-          <img src={TimeIllustartion.src} />
-        </div>
-      </div> */
-}
