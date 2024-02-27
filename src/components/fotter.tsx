@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 export const Fotter = () => {
     return (
-        <footer className="mt-auto border-t w-full">
+        <footer className="mt-auto border-t w-full bg-blue-700">
             <div className='container flex flex-row py-4 '>
                 <div className='hidden md:flex md:flex-row md:space-x-6 text-xs px-6'>
 

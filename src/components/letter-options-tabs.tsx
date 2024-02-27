@@ -6,31 +6,31 @@ import { Tabs } from "@/components/ui/tabs";
 export function LetterOptionsTabs() {
     const tabs = [
         {
-            title: "Product",
-            value: "product",
+            title: "Note",
+            value: "Note",
             content: (
-                <div className="w-full overflow-hidden relative h-full rounded-md font-sans p-5 text-xl md:text-2xl font-bold text-blue-600 bg-white">
-                    <p>Product Tab</p>
+                <div className="w-11/12 lg:w-full overflow-hidden relative h-full rounded-md font-sans p-4 text-lg md:text-2xl font-bold text-blue-500 bg-white  ">
+                    <p>Write a note for your future self</p>
                     <DummyContent />
                 </div>
             ),
         },
         {
-            title: "Services",
-            value: "services",
+            title: "Video",
+            value: "Video",
             content: (
-                <div className="w-full overflow-hidden relative h-full rounded-md font-sans p-5 text-xl md:text-2xl  font-bold text-blue-600 bg-white">
-                    <p>Services tab</p>
+                <div className="w-11/12 lg:w-full overflow-hidden relative h-full rounded-md font-sans p-4 text-lg md:text-2xl  font-bold text-blue-500 bg-white ">
+                    <p>Record a video for your future self</p>
                     <DummyContent />
                 </div>
             ),
         },
         {
-            title: "Playground",
-            value: "playground",
+            title: "Audio",
+            value: "Audio",
             content: (
-                <div className="w-full overflow-hidden relative h-full rounded-md font-sans p-5 text-xl md:text-2xl font-bold text-blue-600 bg-white">
-                    <p>Playground tab</p>
+                <div className="w-11/12  lg:w-full overflow-hidden relative h-full rounded-md font-sans p-4 text-lg md:text-2xl font-bold text-blue-500 bg-white  ">
+                    <p>Record a audio for your future self</p>
                     <DummyContent />
                 </div>
             ),
@@ -51,7 +51,7 @@ const DummyContent = () => {
             alt="dummy image"
             width="1000"
             height="1000"
-            className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%]  mx-auto"
+            className="object-cover object-left-top h-[90%]  absolute -bottom-10 inset-x-0 w-[90%]  mx-auto"
         />
     );
 };

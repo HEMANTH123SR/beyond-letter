@@ -6,7 +6,7 @@ import WebsiteScreenShot from "../../public/website-screen-shot.png";
 
 export default function Home() {
   return (
-    <main className="flex flex-col  min-h-[600vh]">
+    <main className="flex flex-col  min-h-[600vh] ">
       <div className="w-full pl-3 pr-4 md:pl-6 md:pr-20  mt-4 md:mb-6 md:mt-10">
         <h2 className="text-3xl font-extrabold tracking-tight md:text-6xl md:leading-[3.5rem]">
           Write a letter or{" "}
@@ -37,7 +37,7 @@ export default function Home() {
         }
         showGradient={false}
       />
-      <div className="min-h-[120vh]"></div>
+      <div className="md:min-h-[40vh] lg:min-h-[45vh] xl:min-h-[120vh]"></div>
       <h1 className="text-3xl mt-2 font-extrabold tracking-tight md:text-6xl md:leading-[3.5rem] text-center">
         BeyondLetter
       </h1>

@@ -7,11 +7,8 @@ import Link from "next/link";
 export const Nav = () => {
     const { user, isLoaded } = useUser();
     return (
-        <nav
-            className="flex justify-between px-3 md:px-6 py-2"
-            style={{ borderBottom: "1px solid #387ADF" }}
-        >
-            <Link href={'/'}>
+        <nav className="flex justify-between px-3 md:px-6 py-2 bg-blue-700 border-b-2 border-white">
+            <Link href={"/"}>
                 <div className="flex flex-row justify-center items-center space-x-1.5">
                     <div className="flex flex-col justify-center items-center space-y-0.5">
                         <div className="h-2.5 w-7 rounded-full bg-blue-400"></div>

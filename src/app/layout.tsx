@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${inter.className} bg-blue-700 text-white`}>
+        <body className={`${inter.className} bg-blue-700 bg-grid-black/[0.2] text-white`}>
           <Nav />
           {children}
           <Fotter />
